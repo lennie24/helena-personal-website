@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helena Wang | Personal Cafe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-live="polite">
+      <section class="scene scene-exterior is-active" id="exterior" aria-label="咖啡馆外观">
+        <div class="skyline" aria-hidden="true">
+          <span class="building b1"></span>
+          <span class="building b2"></span>
+          <span class="building b3"></span>
+          <span class="building b4"></span>
+        </div>
+
+        <article class="profile-card">
+          <p class="eyebrow">Personal Data Cafe</p>
+          <h1>Helena Wang</h1>
+          <p class="identity">智能感知工程 / 2024级</p>
+          <p class="intro-copy">
+            Hi！欢迎来Helena Wang的个人咖啡馆。Helena很喜欢喝咖啡，尤其喜欢咖啡的清香。“总有那么一刻，当我捧着咖啡，心怀感恩，正是在这一刻让人觉得神圣。”
+          </p>
+        </article>
+
+        <div class="cafe-exterior" aria-label="Helena 的个人咖啡馆外观">
+          <div class="awning">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="signboard">
+            <span>HELENA'S</span>
+            <strong>DATA CAFE</strong>
+          </div>
+          <button class="door" id="enter-cafe" type="button" aria-label="进入咖啡馆">
+            <span class="door-window"></span>
+            <span class="door-handle"></span>
+            <span class="door-label">OPEN</span>
+          </button>
+          <button class="window left-window avatar-window" id="avatar-window" type="button" aria-label="查看 Helena 的照片">
+            <span class="speech-bubble" id="avatar-bubble">hi there</span>
+            <span class="window-person" aria-hidden="true">
+              <span class="person-hair"></span>
+              <span class="person-face">
+                <span class="eye eye-left"></span>
+                <span class="eye eye-right"></span>
+                <span class="smile"></span>
+              </span>
+              <span class="person-body"></span>
+              <span class="bed-edge"></span>
+            </span>
+            <img class="real-avatar" src="assets/my_imgae_final.png" alt="Helena 的照片" />
+          </button>
+          <div class="window right-window" aria-hidden="true"></div>
+          <div class="planter planter-left"></div>
+          <div class="planter planter-right"></div>
+        </div>
+      </section>
+
+      <section class="scene scene-interior" id="interior" aria-label="咖啡馆内部">
+        <header class="room-header">
+          <button class="back-button" id="back-outside" type="button">返回门外</button>
+          <div>
+            <p class="eyebrow">Inside Helena's Cafe</p>
+            <h2>一间可以点开数据的咖啡馆</h2>
+          </div>
+        </header>
+
+        <div class="cafe-room">
+          <button class="wall-map hotspot" id="map-hotspot" type="button" aria-label="查看去过的地方">
+            <span class="map-title">Travel Wall</span>
+            <img src="assets/my_world_map.png" alt="Helena 去过的地方地图" />
+          </button>
+
+          <button class="gramophone hotspot" id="music-hotspot" type="button" aria-label="查看歌单数据">
+            <span class="music-title">My Playlist</span>
+            <img src="assets/gramophone-cabinet.png" alt="带木质底柜的复古留声机" />
+          </button>
+
+          <img class="cafe-chair" src="assets/cafe-chair.png" alt="舒适的复古咖啡馆扶手椅" />
+
+          <button class="coffee-table hotspot" id="coffee-hotspot" type="button" aria-label="抽取今日咖啡签">
+            <img src="assets/coffee-bar.png" alt="咖啡店长吧台和两杯咖啡" />
+            <span class="lucky-tag">幸运便签</span>
+          </button>
+        </div>
+
+        <aside class="data-drawer" id="data-drawer" aria-hidden="true">
+          <button class="drawer-close" id="drawer-close" type="button" aria-label="关闭数据面板">×</button>
+          <div id="drawer-content"></div>
+        </aside>
+
+        <aside class="coffee-note" id="coffee-note" aria-hidden="true">
+          <button class="drawer-close" id="coffee-close" type="button" aria-label="关闭咖啡签">×</button>
+          <p class="note-label">Today's Coffee</p>
+          <h3 id="coffee-title">清香拿铁</h3>
+          <p id="coffee-line">今天适合慢慢来，把灵感先捧在手心里。</p>
+          <ul id="coffee-recipe" class="coffee-recipe"></ul>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
